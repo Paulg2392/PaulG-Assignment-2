@@ -11,8 +11,7 @@ public class Assignment2 {
 		
 		// collect user input
 		
-		// variables
-		
+		// variables		
 			int guess = -1;
 			int attempt = 0;
 		
@@ -25,9 +24,22 @@ public class Assignment2 {
 			System.out.println(secretnumber);
 			
 			while(attempt < 5) {
+				guess = keyboard.nextInt();
+				attempt ++;
 				
-			}
+				if (guess == secretnumber) { System.out.println("You Win!");
+				break; }
+				
+				else if (guess < secretnumber) {System.out.println("Please pick a higher number");
+				}
+				
+				else if (guess > secretnumber) {System.out.println("Please pick a lower number");
+				}
+				
+				if (attempt == 5) {System.out.println("You lose. Please try again");
+				break; }
+				
 
-	}
+	        }
 
 }
